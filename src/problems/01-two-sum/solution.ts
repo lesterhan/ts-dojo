@@ -10,6 +10,12 @@
  *   twoSum([3, 2, 4], 6)      => [1, 2]
  */
 export function twoSum(nums: number[], target: number): [number, number] {
-  // your solution here
-  throw new Error("not implemented");
+
+  for (const [i, addendOne] of nums.entries()) {
+    for (const [j, addendTwo] of nums.entries()) {
+      if (i !== j && addendTwo == target - addendOne) {
+        return [i, j]
+      }
+    }
+  }
 }
